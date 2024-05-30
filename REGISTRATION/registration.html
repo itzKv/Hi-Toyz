@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION</title>
+    <link rel="stylesheet" href="registration.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <!-- REGIS -->
+    <div class="container">
+        <div class="form-box">
+            <form action="" name="Formfill" onsubmit="return validation()">
+                <h2>Register</h2>
+                <p id="result"></p>
+                <div class="input-box">
+                    <i class="bx bxs-user"></i>
+                    <input type="text" name="Name" placeholder="Full name">
+                </div>
+
+                <div class="input-box">
+                    <i class="bx bxs-envelope"></i>
+                    <input type="email"name="Email"  placeholder="Email address">
+                </div>
+
+                <div class="input-box">
+                    <i class="bx bxs-lock-alt"></i>
+                    <input type="password" name="Password"  placeholder="Password">
+                </div>
+
+                <div class="input-box">
+                    <!-- <i class="bx bxs-calendar-alt"></i> -->
+                    <input type="date" name="Date" placeholder="Select date of birth">
+                </div>
+
+                <div class="terms">
+                    <label>
+                        <input type="checkbox" name="terms" id="termsCheckbox">
+                        By signing up, you agree to our <a href="#">Terms and Privacy Policy</a>
+                    </label>
+                </div>
+
+                <div class="button">
+                    <input type="submit" class="btn" onclick="validation()" value="Register"> <br>
+                </div>
+
+                <!-- <div class="group">
+                    <span>By signing up, you agree to our <br> <a href="#">Terms and Privacy Policy</a></span>
+
+                </div> -->
+            </form>
+        </div>
+        <div class="popup" id="popup">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+            <h2>Thank You!</h2>
+            <p>Your registration were successfully done</p>
+            <a href="#"><button onclick="closeSlide()">OK</button></a>
+        </div>
+    </div>
+
+    <script src="registration.js"></script>
+    <script>
+        function redirectToHomePage() {
+          window.location.href = "../HOME/index.html";
+        }
+    </script>
+
+</body>
+</html>
